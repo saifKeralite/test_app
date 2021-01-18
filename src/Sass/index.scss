@@ -1,0 +1,21 @@
+//Common
+@import "vars.scss";
+
+//Base styles
+@import "layout/base.scss";
+
+//Components  styles
+@import "layout/header.scss";
+
+// Page styles
+@import "pages/featured_news.scss";
+@import "pages/latest_news.scss";
+
+// Responsive
+@import "pages/responsive.scss";
+
+//Search result
+@import "component/search_result.scss";
+
+//Details
+@import "pages/details.scss";
