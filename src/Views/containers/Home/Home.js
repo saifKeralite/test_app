@@ -6,6 +6,7 @@ import { GET_NEWS_HEADINGS } from '../../../redux/actionTypes/index';
 import { get_news_headings, get_features_news_headings, removeLocalStorage } from '../../../redux/actions/index'
 import FeaturedNews from '../FeaturedNews/FeaturedNews';
 import LatestNews from '../LatestNews/LatestNews';
+require('dotenv').config();
 
 class Home extends Component {
   constructor(props) {
@@ -18,7 +19,8 @@ class Home extends Component {
     lNews: false
   }
   componentDidMount() {
-    console.log(process.env.REACT_APP_API_KEY, "api")
+
+    // console.log(db, "db")
     if (localStorage.getItem('refreshTime') == "0" || localStorage.getItem('refreshTime') == null) {
       localStorage.getItem('refreshTime', 0)
       this.props.get_features_headingsFn(this.fNewsisReady);
